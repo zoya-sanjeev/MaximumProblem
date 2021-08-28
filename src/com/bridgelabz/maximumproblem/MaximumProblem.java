@@ -4,27 +4,13 @@ public class MaximumProblem {
 
 
 	
-	public static void findMaxOfThree(Integer one, Integer two, Integer three) {
+	public static <E extends Comparable <E>> void findMaxOfThree(E one, E two, E three) {
 		
-		Integer maxOfTwo=(one.compareTo(two)>0?one:two);
-		Integer maxInteger=(maxOfTwo.compareTo(three)>0?maxOfTwo:three);
-		System.out.println("Maximum of three integers are:"+maxInteger);
+		E maxOfTwo=(one.compareTo(two)>0?one:two);
+		E max=(maxOfTwo.compareTo(three)>0?maxOfTwo:three);
+		System.out.println("Maximum of three integers are:"+max);
 	}
-	
-	public static void findMaxOfThree(Float one, Float two, Float three) {
-		
-		Float maxOfTwo=(one.compareTo(two)>0?one:two);
-		Float maxFloat=(maxOfTwo.compareTo(three)>0?maxOfTwo:three);
-		System.out.println("Maximum of three floats are:"+maxFloat);
-	}
-	
-	public static void findMaxOfThree(String one, String two, String three) {
-		
-		String maxOfTwo=(one.compareTo(two)>0?one:two);
-		String maxString=(maxOfTwo.compareTo(three)>0?maxOfTwo:three);
-		System.out.println("Maximum of three strings are:"+maxString);
-	}
-	
+
 	public static void main(String[] args) {
 		
 		Integer firstInteger=5;
